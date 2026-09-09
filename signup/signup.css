@@ -1,0 +1,536 @@
+/* =========================================
+   NEXSTEP SIGN UP
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --navy: #0d2147;
+    --navy-dark: #07142d;
+    --yellow: #f4c526;
+    --white: #ffffff;
+    --gray: #9ca6b5;
+    --light: #f4f6fa;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--navy-dark);
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.signup-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07142d 0%,
+            #0d2147 55%,
+            #08152e 100%
+        );
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.background-shape {
+    position: absolute;
+
+    border: 2px solid rgba(244, 197, 38, 0.15);
+
+    transform: rotate(35deg);
+}
+
+
+.shape-one {
+    width: 420px;
+    height: 420px;
+
+    top: -180px;
+    right: -80px;
+}
+
+
+.shape-two {
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -70px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.signup-card {
+    position: relative;
+    z-index: 2;
+
+    width: 980px;
+    min-height: 600px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   BRAND PANEL
+========================================= */
+
+.brand-panel {
+    position: relative;
+
+    padding: 35px 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            160deg,
+            #07142d 0%,
+            #102b5c 100%
+        );
+}
+
+
+.brand-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 8px;
+
+    left: 0;
+    top: 0;
+
+    background: var(--yellow);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-container {
+    position: relative;
+
+    width: 100%;
+    height: 150px;
+
+    overflow: hidden;
+}
+
+
+.logo {
+    position: absolute;
+
+    width: 360px;
+    height: auto;
+
+    top: -90px;
+    left: -40px;
+
+    display: block;
+}
+
+
+/* =========================================
+   BRAND MESSAGE
+========================================= */
+
+.brand-message {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: var(--yellow);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.brand-message h1 {
+    max-width: 310px;
+
+    margin-bottom: 18px;
+
+    font-size: 40px;
+    line-height: 1.08;
+}
+
+
+.brand-message h1 span {
+    display: block;
+
+    color: var(--yellow);
+}
+
+
+.brand-message > p:last-child {
+    max-width: 305px;
+
+    color: #b8c1cf;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RETURN TO STORE
+========================================= */
+
+.store-link {
+    color: #c7ced8;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+.store-link:hover {
+    color: var(--yellow);
+}
+
+
+/* =========================================
+   FORM PANEL
+========================================= */
+
+.form-panel {
+    padding: 50px 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: var(--white);
+
+    color: #111111;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.form-heading {
+    margin-bottom: 25px;
+}
+
+
+.small-heading {
+    margin-bottom: 8px;
+
+    color: #9a7900;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+
+.form-heading h2 {
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 31px;
+}
+
+
+.form-heading > p:last-child {
+    color: #7b8492;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #27334a;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d3d7df;
+    border-radius: 8px;
+
+    background: #f8f9fb;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+    border-color: var(--yellow);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(244, 197, 38, 0.13);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.signup-button {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 6px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--navy);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.signup-button:hover {
+    background: var(--yellow);
+
+    color: var(--navy-dark);
+}
+
+
+/* =========================================
+   LOGIN BOX
+========================================= */
+
+.login-box {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: var(--light);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+.login-box span {
+    color: #777f8c;
+}
+
+
+.login-box a {
+    margin-left: 5px;
+
+    color: var(--navy);
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.login-box a:hover {
+    color: #9a7900;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .signup-card {
+        width: 650px;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .brand-panel {
+        min-height: 300px;
+    }
+
+
+    .logo-container {
+        height: 130px;
+    }
+
+
+    .logo {
+        width: 330px;
+
+        top: -85px;
+        left: -45px;
+    }
+
+
+    .brand-message {
+        margin: 25px 0;
+    }
+
+
+    .form-panel {
+        padding: 45px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .signup-page {
+        padding: 20px 15px;
+    }
+
+
+    .signup-card {
+        width: 100%;
+
+        border-radius: 16px;
+    }
+
+
+    .brand-panel {
+        padding: 25px;
+    }
+
+
+    .logo-container {
+        height: 110px;
+    }
+
+
+    .logo {
+        width: 280px;
+
+        top: -72px;
+        left: -35px;
+    }
+
+
+    .brand-message h1 {
+        font-size: 31px;
+    }
+
+
+    .form-panel {
+        padding: 35px 25px;
+    }
+
+
+    .form-heading h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+.message {
+    margin-bottom: 18px;
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.error-message {
+    background: #ffe5e5;
+    border: 1px solid #efb4b4;
+
+    color: #9c2222;
+}

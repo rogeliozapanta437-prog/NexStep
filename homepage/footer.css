@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7f9;
+    color: #0a1730;
+}
+
+.info-header {
+    height: 86px;
+    background: #090909;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.info-header img {
+    width: 170px;
+    height: auto;
+}
+
+.info-header nav {
+    margin-left: auto;
+    display: flex;
+    gap: 32px;
+}
+
+.info-header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.info-header nav a:hover {
+    color: #f7c928;
+}
+
+.info-hero {
+    background: #0b1d3a;
+    color: white;
+    padding: 55px 8%;
+}
+
+.info-hero p {
+    color: #f7c928;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.info-hero h1 {
+    font-size: 42px;
+}
+
+.info-container {
+    width: min(1100px, 88%);
+    margin: 45px auto 70px;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #e1e5eb;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 18px;
+}
+
+.info-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.info-card p,
+.info-card li {
+    color: #566171;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.info-table th,
+.info-table td {
+    padding: 14px;
+    border: 1px solid #e1e5eb;
+    text-align: left;
+    font-size: 14px;
+}
+
+.info-table th {
+    background: #0b1d3a;
+    color: white;
+}
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0b1d3a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    color: #b88d00;
+}
+
+.info-footer {
+    background: #101010;
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .info-header {
+        padding: 0 5%;
+    }
+
+    .info-header nav {
+        gap: 15px;
+    }
+
+    .info-header nav a {
+        font-size: 11px;
+    }
+
+    .info-hero h1 {
+        font-size: 32px;
+    }
+
+    .info-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

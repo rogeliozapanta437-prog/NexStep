@@ -1,0 +1,1305 @@
+/* =========================================
+   ROOT / GLOBAL
+========================================= */
+
+:root {
+    --yellow: #edc234;
+    --black: #0b0b0b;
+    --white: #ffffff;
+    --text: #111111;
+    --gray: #747474;
+    --border: #dedede;
+    --soft: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--white);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.shop-header {
+    width: 100%;
+    height: 74px;
+    padding: 0 6.5%;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    background: var(--black);
+    color: var(--white);
+
+    position: relative;
+    z-index: 20;
+}
+
+.shop-logo {
+    width: 200px !important;
+    height: 74px !important;
+
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 200px;
+
+    overflow: hidden;
+}
+
+.shop-logo img {
+    width: 200px !important;
+    max-width: 200px !important;
+    height: auto !important;
+
+    display: block !important;
+
+    object-fit: contain;
+
+    transform: translateY(10px);
+}
+
+.shop-header nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.shop-header nav a,
+.header-actions > a {
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.shop-header nav a:hover,
+.header-actions > a:hover {
+    color: var(--yellow);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.back-home {
+    padding: 9px 14px;
+
+    border: 1px solid #555555;
+}
+
+.back-home:hover {
+    border-color: var(--yellow);
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.account-heading {
+    padding: 42px 6% 30px;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    color: #777777;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.back-link:hover {
+    color: #111111;
+}
+
+.eyebrow,
+.section-label {
+    color: #a88400;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    margin-bottom: 7px;
+}
+
+.account-heading h1 {
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 900;
+
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+.heading-copy {
+    margin-top: 12px;
+
+    color: #777777;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ACCOUNT PAGE
+========================================= */
+
+.account-page {
+    width: min(1380px, 88%);
+
+    margin: 0 auto;
+
+    padding: 38px 0 80px;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    border: 1px solid var(--border);
+
+    background: #ffffff;
+}
+
+.profile-top {
+    padding: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 64px;
+
+    background: var(--yellow);
+
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.profile-top h2 {
+    margin-top: 5px;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.profile-top span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+.profile-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.profile-details > div {
+    padding: 22px 28px;
+}
+
+.profile-details > div + div {
+    border-left: 1px solid var(--border);
+}
+
+.profile-details span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #888888;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 0.6px;
+}
+
+.profile-details strong {
+    font-size: 12px;
+    font-weight: 900;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.summary-grid {
+    margin-top: 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.summary-card {
+    min-height: 165px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    background: #fafafa;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+a.summary-card:hover {
+    border-color: #999999;
+
+    transform: translateY(-2px);
+}
+
+.summary-card p {
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 0.6px;
+}
+
+.summary-card h2 {
+    margin: 14px 0;
+
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+.summary-card span {
+    margin-top: auto;
+
+    color: #777777;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   ACCOUNT OPTIONS
+========================================= */
+
+.account-options {
+    margin-top: 24px;
+
+    border: 1px solid var(--border);
+}
+
+.options-heading {
+    padding: 24px 28px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.options-heading h2 {
+    margin-top: 5px;
+
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.options-list > a {
+    min-height: 78px;
+
+    padding: 18px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition: background 0.2s ease;
+}
+
+.options-list > a:last-child {
+    border-bottom: 0;
+}
+
+.options-list > a:hover {
+    background: #fafafa;
+}
+
+.options-list strong {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.options-list span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+.options-list b {
+    font-size: 18px;
+}
+
+.logout-option strong {
+    color: #8d2424;
+}
+
+
+/* =========================================
+   CHANGE PASSWORD PAGE
+========================================= */
+
+.password-page {
+    width: min(720px, 88%);
+
+    margin: 0 auto;
+
+    padding: 38px 0 80px;
+}
+
+.password-card {
+    border: 1px solid var(--border);
+
+    background: #ffffff;
+}
+
+.password-card-heading {
+    padding: 26px 28px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.password-card-heading h2 {
+    margin-top: 5px;
+
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.password-card-heading > p:last-child {
+    max-width: 520px;
+
+    margin-top: 8px;
+
+    color: #777777;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.password-form {
+    padding: 28px;
+}
+
+.password-field + .password-field {
+    margin-top: 20px;
+}
+
+.password-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.password-field input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #cccccc;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+.password-field input:hover {
+    border-color: #999999;
+}
+
+.password-field input:focus {
+    border-color: #111111;
+
+    box-shadow: 0 0 0 1px #111111;
+}
+
+.change-password-button {
+    width: 100%;
+    min-height: 52px;
+
+    margin-top: 28px;
+
+    border: 1px solid #111111;
+
+    background: var(--yellow);
+    color: #111111;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+}
+
+.change-password-button:hover {
+    background: #d8ad23;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.account-message {
+    margin-bottom: 20px;
+
+    padding: 13px 16px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.account-message.success {
+    background: #f2f7ee;
+
+    border: 1px solid #bdd2ad;
+}
+
+.account-message.error {
+    background: #fff1f1;
+
+    border: 1px solid #e1b7b7;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .shop-header nav {
+        gap: 16px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .shop-header {
+        height: auto;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+    }
+
+    .shop-logo {
+        width: 145px !important;
+        height: 55px !important;
+
+        flex-basis: 145px;
+    }
+
+    .shop-logo img {
+        width: 145px !important;
+
+        transform: translateY(6px);
+    }
+
+    .shop-header nav {
+        width: 100%;
+
+        order: 3;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .account-page,
+    .password-page {
+        width: 90%;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-details > div + div {
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .account-heading {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .account-heading h1 {
+        font-size: 38px;
+    }
+
+    .account-page,
+    .password-page {
+        width: 92%;
+    }
+
+    .profile-top {
+        padding: 22px;
+
+        align-items: flex-start;
+    }
+
+    .profile-details > div,
+    .options-heading,
+    .options-list > a,
+    .password-card-heading,
+    .password-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .shop-header nav a {
+        font-size: 10px;
+    }
+}
+
+
+/* ========================================
+   NEXSTEP CUSTOMER REVIEWS
+======================================== */
+
+.customer-reviews-body {
+    margin: 0;
+    background: #f7f7f7;
+    color: #111;
+}
+
+
+/* HEADER */
+
+.reviews-main-header {
+    height: 72px;
+    padding: 0 5%;
+    background: #090909;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.reviews-logo img {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+.reviews-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.reviews-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.reviews-nav a:hover {
+    color: #f4c51c;
+}
+
+.reviews-account-button {
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* HERO */
+
+.reviews-hero {
+    padding: 28px 7%;
+    background:
+        linear-gradient(
+            90deg,
+            #111,
+            #252525
+        );
+
+    color: #fff;
+}
+
+.reviews-hero > div {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.reviews-hero p {
+    margin: 0 0 10px;
+    color: #bbb;
+    font-size: 12px;
+}
+
+.reviews-hero h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+.reviews-hero span {
+    color: #ddd;
+}
+
+
+/* TABS */
+
+.reviews-tabs {
+    padding: 0 7%;
+    height: 54px;
+    display: flex;
+    align-items: flex-end;
+    gap: 45px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.reviews-tabs a {
+    height: 54px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.reviews-tabs a.active {
+    border-bottom-color: #f4c51c;
+}
+
+
+/* ALERTS */
+
+.reviews-alert {
+    max-width: 1200px;
+    margin: 25px auto 0;
+    padding: 14px 18px;
+    border-radius: 6px;
+}
+
+.reviews-alert.success {
+    background: #edf8ef;
+    color: #256b2d;
+}
+
+.reviews-alert.error {
+    background: #fff0f0;
+    color: #a12626;
+}
+
+
+/* ========================================
+   MY REVIEWS
+======================================== */
+
+.my-reviews-container {
+    max-width: 1200px;
+    margin: 35px auto 80px;
+    padding: 0 25px;
+}
+
+.my-review-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+.review-section-heading {
+    margin-bottom: 25px;
+}
+
+.review-section-heading p {
+    color: #b68c00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+}
+
+.review-section-heading h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.review-empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.review-empty-state h3 {
+    margin: 0 0 8px;
+}
+
+.review-empty-state p {
+    margin: 0;
+    color: #777;
+}
+
+
+/* WRITE REVIEW */
+
+.write-review-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    border-top: 1px solid #eee;
+    padding: 28px 0;
+}
+
+.write-review-product {
+    display: flex;
+    gap: 20px;
+}
+
+.write-review-product img {
+    width: 160px;
+    height: 150px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.write-review-product span,
+.review-small {
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+}
+
+.write-review-product h3 {
+    margin: 8px 0;
+}
+
+.write-review-product p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.write-review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.write-review-form label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.write-review-form select,
+.write-review-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    font: inherit;
+}
+
+.write-review-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.write-review-form button {
+    width: fit-content;
+    background: #111;
+    color: #fff;
+    border: 0;
+    padding: 12px 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* SUBMITTED REVIEW */
+
+.my-submitted-review {
+    display: flex;
+    gap: 22px;
+    padding: 25px 0;
+    border-top: 1px solid #eee;
+}
+
+.my-submitted-review > img {
+    width: 150px;
+    height: 140px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.my-submitted-review h3 {
+    margin: 7px 0;
+}
+
+.my-submitted-review p {
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   ALL REVIEWS
+======================================== */
+
+.all-reviews-layout {
+    max-width: 1450px;
+    margin: 30px auto 80px;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns:
+        240px minmax(0, 1fr) 280px;
+
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* FILTER */
+
+.review-filter-panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.review-filter-panel h2 {
+    margin: 0 0 24px;
+    font-size: 20px;
+}
+
+.review-filter-panel h3 {
+    font-size: 14px;
+    margin: 20px 0 10px;
+}
+
+.review-filter-panel > a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.review-filter-panel > a:hover,
+.review-filter-panel > a.selected {
+    background: #f3f3f3;
+    color: #111;
+}
+
+.filter-stars {
+    color: #f4bb00;
+    letter-spacing: 1px;
+    margin-right: 4px;
+}
+
+.filter-divider {
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.review-filter-panel
+.clear-review-filters {
+    text-align: center;
+    border: 1px solid #222;
+    color: #111;
+    margin-top: 20px;
+    padding: 11px;
+}
+
+
+/* TOOLBAR */
+
+.all-review-toolbar {
+    min-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.all-review-toolbar form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.all-review-toolbar label {
+    font-size: 13px;
+}
+
+.all-review-toolbar select {
+    padding: 9px 30px 9px 12px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+
+/* REVIEW CARD */
+
+.customer-review-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 13px;
+}
+
+.customer-review-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-review-product img {
+    width: 100%;
+    height: 125px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.customer-review-product strong {
+    font-size: 14px;
+}
+
+.customer-review-product span {
+    color: #777;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.review-customer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-avatar {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    border-radius: 50%;
+    background: #e4e6eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.review-customer strong {
+    margin-right: 7px;
+}
+
+.verified-review {
+    background: #f2f2f2;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.review-yellow-stars,
+.overall-stars {
+    color: #f4bb00;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.customer-review-comment {
+    margin: 8px 0 12px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.review-date {
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   OVERALL RATING
+======================================== */
+
+.overall-rating-card,
+.review-trust-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 25px 20px;
+}
+
+.overall-rating-card {
+    text-align: center;
+}
+
+.overall-rating-card h2 {
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+.overall-rating-number {
+    display: block;
+    font-size: 52px;
+    line-height: 1;
+}
+
+.overall-rating-card > p {
+    color: #555;
+    font-size: 13px;
+}
+
+.rating-breakdown {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.rating-row {
+    display: grid;
+    grid-template-columns: 50px 1fr 25px;
+    align-items: center;
+    gap: 8px;
+    margin: 11px 0;
+    font-size: 11px;
+    text-align: left;
+}
+
+.rating-bar {
+    height: 10px;
+    border-radius: 10px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.rating-bar div {
+    height: 100%;
+    background: #f4bb00;
+    border-radius: 10px;
+}
+
+.review-trust-card {
+    margin-top: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.trust-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    border-radius: 50%;
+    background: #f4c51c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.review-trust-card h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.review-trust-card p {
+    margin: 0;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .all-reviews-layout {
+        grid-template-columns: 210px 1fr;
+    }
+
+    .review-summary-column {
+        grid-column: 1 / -1;
+    }
+
+    .reviews-nav {
+        display: none;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .all-reviews-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-review-card {
+        grid-template-columns: 1fr;
+    }
+
+    .write-review-card {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-hero h1 {
+        font-size: 32px;
+    }
+
+    .reviews-logo img {
+        width: 145px;
+    }
+
+    .review-filter-panel {
+        order: 1;
+    }
+
+    .all-review-list {
+        order: 2;
+    }
+
+    .review-summary-column {
+        order: 3;
+    }
+}
