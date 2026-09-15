@@ -1,0 +1,22 @@
+# Operating System 
+.DS_Store
+Thumbs.db
+desktop.ini
+
+#Editor settings
+.vscode/
+.idea/
+
+#Temporary files
+*.tmp 
+*.temp 
+*.log
+*~
+
+#Environment files
+.env
+.env.*
+
+#Depencies
+vendor/
+node_modules/

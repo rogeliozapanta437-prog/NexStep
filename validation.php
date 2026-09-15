@@ -12,8 +12,8 @@ function validateRequired(string $value, string $fieldName): ?string
 
 function validateUsername(string $username): ?string
 {
-    if (strlen($username) < 3) {
-        return "Username must be at least 3 characters.";
+    if (strlen($username) < 6) {
+        return "Username must be at least 6 characters.";
     }
 
     return null;

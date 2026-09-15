@@ -498,8 +498,8 @@ a {
 }
 
 .empty-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 
     margin-bottom: 18px;
 
@@ -507,7 +507,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    border: 2px solid #111111;
+    border: none;
 
     font-size: 30px;
 }
@@ -750,4 +750,20 @@ a {
 .cancel-order-button:hover {
     background: #111111;
     color: #ffffff;
+}
+
+.receipt-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.receipt-button:hover {
+    opacity: 0.8;
 }

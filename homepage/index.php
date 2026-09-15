@@ -310,7 +310,7 @@ $categories = [
     [
         'class' => 'women',
         'title' => 'WOMEN',
-        'link' => 'Explore',
+        'link' => 'Shop now',
         'image' => 'new17.jpg',
         'alt' => 'Women shoes'
     ]
@@ -429,7 +429,7 @@ $policyLinks = [
 
             <link
                 rel="stylesheet"
-                href="style.css?v=100">"
+                href="style.css?v=100"
             >
 
         </head>
@@ -885,7 +885,7 @@ $policyLinks = [
 
         <div class="hero-buttons">
 
-            <a href="#just-landed">
+            <a href="../products/products.php">
 
                 SHOP NOW
 

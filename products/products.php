@@ -242,6 +242,55 @@ $search =
     trim($_GET['search'] ?? '');
 
 
+    
+
+    // ========================================
+// RECORD ACTUAL SEARCH SUBMISSION
+// ========================================
+
+if (
+    isset($_GET['do_search']) &&
+    $_GET['do_search'] === '1' &&
+    $search !== ''
+) {
+
+    $searchHistoryStmt = $pdo->prepare(
+        "INSERT INTO search_history
+        (
+            user_id,
+            search_term
+        )
+        VALUES
+        (
+            :user_id,
+            :search_term
+        )"
+    );
+
+    $searchHistoryStmt->bindValue(
+        ':user_id',
+        $userId,
+        PDO::PARAM_INT
+    );
+
+    $searchHistoryStmt->bindValue(
+        ':search_term',
+        $search,
+        PDO::PARAM_STR
+    );
+
+    $searchHistoryStmt->execute();
+
+    header(
+        "Location: products.php?search=" .
+        urlencode($search)
+    );
+
+    exit;
+}
+
+
+
 // ========================================
 // BUILD PRODUCT QUERY
 // ========================================
@@ -526,23 +575,29 @@ if ($search !== '') {
 
 <section class="product-search">
 
-    <form
-        action="products.php"
-        method="GET"
+<form
+    action="products.php"
+    method="GET"
+>
+
+    <input
+        type="hidden"
+        name="do_search"
+        value="1"
     >
 
-        <input
-            type="text"
-            name="search"
-            placeholder="Search shoes, brands, styles..."
-            value="<?= htmlspecialchars($search) ?>"
-        >
+    <input
+        type="text"
+        name="search"
+        placeholder="Search shoes, brands, styles..."
+        value="<?= htmlspecialchars($search) ?>"
+    >
 
-        <button type="submit">
-            SEARCH
-        </button>
+    <button type="submit">
+        SEARCH
+    </button>
 
-    </form>
+</form>
 
 </section>
 

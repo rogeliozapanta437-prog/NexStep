@@ -346,7 +346,7 @@ $orders = $orderStmt->fetchAll(
 
     <link
         rel="stylesheet"
-        href="orders.css"
+        href="/webapp/orders/orders.css?v=2"
     >
 
 </head>
@@ -460,7 +460,7 @@ $orders = $orderStmt->fetchAll(
         <section class="empty-orders">
 
             <div class="empty-icon">
-                □
+                📦
             </div>
 
             <h2>
@@ -780,6 +780,13 @@ $orders = $orderStmt->fetchAll(
                                     2
                                 ) ?>
                             </strong>
+
+                            <a
+                                href="receipt.php?id=<?= (int) $order['id'] ?>"
+                                class="receipt-button"
+                            >
+                                VIEW RECEIPT
+                            </a>
 
                         </div>
 
