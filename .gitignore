@@ -1,22 +1,71 @@
-# Operating System 
-.DS_Store
-Thumbs.db
-desktop.ini
+# ========================================
+# PHP / Local Configuration
+# ========================================
 
-#Editor settings
-.vscode/
-.idea/
+# Database configuration
+database/config.php
 
-#Temporary files
-*.tmp 
-*.temp 
-*.log
-*~
-
-#Environment files
+# Environment files
 .env
 .env.*
+!.env.example
 
-#Depencies
-vendor/
-node_modules/
+
+# ========================================
+# Uploaded Files
+# ========================================
+
+# User/product uploads
+uploads/
+
+# Ignore uploaded images/files
+**/uploads/
+
+
+# ========================================
+# IDE / Editor
+# ========================================
+
+# VS Code
+.vscode/
+
+# PHPStorm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# ========================================
+# Logs
+# ========================================
+
+*.log
+logs/
+
+
+# ========================================
+# Temporary / Cache Files
+# ========================================
+
+*.tmp
+*.temp
+*.cache
+cache/
+
+
+# ========================================
+# PHP Generated Files
+# ========================================
+
+*.phar
+
+
+# ========================================
+# Backup Files
+# ========================================
+
+*.bak
+*.backup
+*~
